@@ -34,6 +34,7 @@
 
 html, .tui-editor-contents {
 	font-family: 'LotteMartDream', sans-serif !important;
+	text-decoration:none !important;
 }
 
 /* 폰트 */
@@ -338,6 +339,7 @@ body {
 	padding: 20px 0;
 	border-top: 2px solid white;
 	border-bottom: 2px solid white;
+	justify-content:center;
 }
 
 .bottom-bar__site-info {
@@ -371,13 +373,35 @@ body {
 	height: 100%;
 }
 
-.main>.con>.content {
-	margin: 20px 0;
+.main > .con > .content{
   margin:20px 0;
   padding:20px;  
+  padding-bottom:30px;
   background-color:white;
   color:black;
-  border-radius:10px;
+  border-radius:10px;  
+}
+
+.latest-articles{
+  width:50%;
+}
+
+.latest-articles > li > span{
+  display:inline-block;
+  width:10%;
+  text-align:center;
+}
+
+.latest-articles > li > span:nth-child(2){
+  width:25%;
+}
+
+.latest-articles > li > span:nth-child(3){
+  width:45%;
+}
+
+.latest-articles > li > span:nth-child(4){
+  width:15%;
 }
 /* 메인 */
 /* 게시물 리스트 시작 */
@@ -461,3 +485,41 @@ body {
 	text-decoration: underline;
 }
 /* 게시물 상세 끝 */
+/* 통계 */
+.stat > ul{
+  border-top:1px solid;
+  border-bottom:1px solid;
+  margin:0 20px;
+  margin-top:10px;
+  padding-bottom:15px;
+}
+
+.stat > ul > li:first-of-type{
+  margin:20px 0;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+.stat > ul > li {
+  display:block;
+  width:100%;
+  justify-content:space-around;
+  font-size:1.1rem;
+  text-align:center;
+}
+
+.stat > ul > li:not(:first-child) > span {
+  display:inline-block;
+  width:30%;
+  text-align:center; 
+  padding:15px 0;
+}
+
+.stat > ul > li:first-child > span{
+  width:100;
+}
+
+.stat > ul > .total {
+  font-weight:bold;
+}
+/* 통계 */
