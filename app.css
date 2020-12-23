@@ -402,6 +402,12 @@ body {
 	border-bottom: 1px solid black;
 }
 
+.article-list>ul:hover{
+  background-color:black;
+  color:white;
+  opacity:0.7;
+}
+
 .article-list>ul>li {
 	width: 10%;
 	text-align: center;
@@ -430,7 +436,7 @@ body {
 	flex-grow: 1;
 }
 
-.article-list>ul:not(:first-child ) >li:nth-of-type(4):hover {
+.article-list>ul:not(:first-child ) >li:nth-of-type(4) > a:hover{
 	text-decoration: underline;
 }
 
