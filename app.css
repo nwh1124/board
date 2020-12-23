@@ -386,22 +386,14 @@ body {
   width:50%;
 }
 
-.latest-articles > li > span{
+.latest-articles > div > span{
   display:inline-block;
-  width:10%;
-  text-align:center;
+  width:20%;
+  padding:5px 0;
 }
 
-.latest-articles > li > span:nth-child(2){
-  width:25%;
-}
-
-.latest-articles > li > span:nth-child(3){
-  width:45%;
-}
-
-.latest-articles > li > span:nth-child(4){
-  width:15%;
+.latest-articles > div > span:nth-child(2){
+  width:30%;
 }
 /* 메인 */
 /* 게시물 리스트 시작 */
