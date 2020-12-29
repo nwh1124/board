@@ -1,6 +1,6 @@
 /*
-SQLyog Community v13.1.5  (64 bit)
-MySQL - 10.4.17-MariaDB : Database - ssgDb
+SQLyog Community v13.1.7 (64 bit)
+MySQL - 10.4.14-MariaDB : Database - ssgDb
 *********************************************************************
 */
 
@@ -31,7 +31,7 @@ CREATE TABLE `article` (
   `memberId` int(10) unsigned NOT NULL,
   `boardId` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `article` */
 
@@ -50,7 +50,9 @@ insert  into `article`(`id`,`regDate`,`updateDate`,`title`,`body`,`hit`,`recomme
 (12,'2020-12-22 10:20:17','2020-12-22 10:20:17','자바#10 데이터 타입#3','# 자바\r\n<br>\r\n## 데이터 타입#3 상수와 데이터 타입\r\n- 상수는 변수의 반대 의미로, 변하지 않는 값을 의미한다\r\n- int a = 2; 에서의 2가 상수이다.\r\n- 변수의 byte, short, int, long 처럼 상수에도 데이터 타입이 있다.\r\n- 정수는 기본적으로 int형이며 실수는 double형이다\r\n- 각 상수 뒤에 .F, L을 붙이거나 앞에 (float), (long)을 붙여서 형식을 지정해줄 수 있다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nint a = 2;  // a는 변수, 2는 상수이다\r\n2 = 5; // 상수인 2에는 다른 값인 5를 할당할 수 없으므로 에러가 난다\r\nfloat = 2.2; // double을 float형으로 치환할 수 없다는 에러가 난다\r\n```\r\n## 결과\r\n ...\r\n## 부연\r\n- 데이터 타입에 따른 에러는 각 타입을 따로 지정해주는 방식으로 해결할 수도 있다',10,0,1,3),
 (13,'2020-12-23 09:17:53','2020-12-23 09:17:55','자바#11 자료형 변환','# 자바\r\n<br>\r\n## 자료형 변환\r\n- 같은 값이라도 자료형 별로 bit는 다르게 저장된다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nint a = 200;\r\nfloat b = 200.0;\r\n```\r\n## 결과 \r\na bit == 00000000 00000000 00000000 11001000\r\nb bit == 01000011 01001000 00000000 00000000\r\n\r\n## 부연\r\n- 데이터의 손실이 없다면 자동 형 변환이 일어난다\r\n- int a = 2; float b = a; .. b == 2;\r\n- 위의 경우는 정수형 -> 실수형으로 변환하는 과정에서 데이터 손실이 없기 때문에 자동적으로 자료형이 변한다\r\n- 반대로 float을 int에 대입할 경우 에러가 난다\r\n- 형 변환 규칙\r\n- byte -> shot, char -> int -> long -> float -> double\r\n- 자동 형 변환이 일어나지 않는 경우도 데이터 앞에 (int)를 붙이는 것과 같은 방식으로 명시적 형 변환도 가능하다',10,0,1,3),
 (14,'2020-12-23 09:28:35','2020-12-23 09:28:37','자바#12 연산자','# 자바\r\n<br>\r\n## 연산자\r\n- 연산자에는 대입, 산술, 비교, 논리 연산자 등이 있다\r\n- 산술 연산자는 + - * / % 등이 있다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nint a = 10;\r\n\r\na = a + 10;\r\nSystem.out.println(a);\r\n\r\na = a - 10;\r\nSystem.out.println(a);\r\n\r\na = a * 10;\r\nSystem.out.println(a);\r\n\r\na = a / 10;\r\nSystem.out.println(a);\r\n\r\na = a % 10;\r\nSystem.out.println(a);\r\n\r\nString b = \"와\"\r\nString c = \"우\"\r\n\r\nSystem.out.println(b + c);\r\n```\r\n## 결과 \r\n20\r\n10\r\n100\r\n10\r\n1\r\n와우\r\n\r\n## 부연\r\n- 더하기 연산자는 문자열과 문자열을 합칠 때도 사용할 수 있다\r\n- 정수 나누기 연산 시 실수 부분은 버려진다 (3 / 10 == 3.3333... ) -> 3\r\n- 정수를 실수로 나눌 경우 자동 형 변환이 일어나고 자료형이 실수가 된다 -> 3.333...',10,0,1,3),
-(15,'2020-12-23 09:36:20','2020-12-23 09:36:22','자바#13 단항 연산자','# 자바\r\n<br>\r\n## 단항 연산자\r\n- 단항 연산자는 항이 하나인 연산자이다\r\n- -3, +2 등 양수 및 음수 표현이 가능하다\r\n- a++, b-- 등 값을 1씩 더하거나 뺄 수 있다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nint a = 10;\r\n\r\nSystem.out.println(a++);\r\n\r\nSystem.out.println(++a);\r\n\r\nSystem.out.println(--a);\r\n\r\nSystem.out.println(a--);\r\n\r\nSystem.out.println(a);\r\n```\r\n## 결과 \r\n10\r\n12\r\n11\r\n11\r\n10\r\n\r\n## 부연\r\n- ++, --와 같은 단항 연산자는 항의 앞 뒤 모두 자리할 수 있다\r\n- 항의 앞에 자리할 경우 연산 후 println이 실행된다\r\n- 항의 뒤에 자리할 경우 println 실행 후 연산이 일어난다',10,0,1,3);
+(15,'2020-12-23 09:36:20','2020-12-23 09:36:22','자바#13 단항 연산자','# 자바\r\n<br>\r\n## 단항 연산자\r\n- 단항 연산자는 항이 하나인 연산자이다\r\n- -3, +2 등 양수 및 음수 표현이 가능하다\r\n- a++, b-- 등 값을 1씩 더하거나 뺄 수 있다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nint a = 10;\r\n\r\nSystem.out.println(a++);\r\n\r\nSystem.out.println(++a);\r\n\r\nSystem.out.println(--a);\r\n\r\nSystem.out.println(a--);\r\n\r\nSystem.out.println(a);\r\n```\r\n## 결과 \r\n10\r\n12\r\n11\r\n11\r\n10\r\n\r\n## 부연\r\n- ++, --와 같은 단항 연산자는 항의 앞 뒤 모두 자리할 수 있다\r\n- 항의 앞에 자리할 경우 연산 후 println이 실행된다\r\n- 항의 뒤에 자리할 경우 println 실행 후 연산이 일어난다',10,0,1,3),
+(16,'2020-12-29 18:29:25','2020-12-29 18:29:28','자바#14 Boolean','# 자바\r\n<br>\r\n## Boolean\r\n- Boolean은 참과 거짓을 의미하는 데이터 타입이다\r\n- bool이라고도 부른다\r\n- true, false 두 가지의 값을 갖는다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\nboolean a = true;\r\nboolean b = false;\r\nif( a ){\r\nSystem.out.println(\"a는 참이다\");\r\n}\r\nif( b ){\r\nSystem.out.println(\"b는 참이다\");\r\n}\r\n```\r\n## 결과 \r\n- a는 참이다\r\n\r\n## 부연\r\n- 없음',10,0,1,3),
+(17,'2020-12-29 18:32:44','2020-12-29 18:32:47','자바#15 비교 연산자','# 자바\r\n<br>\r\n## 비교 연산자\r\n- 주어진 값들이 같은지, 다른지, 큰지, 작은지 등을 구분하는 연산자\r\n- 참true, 거짓false 중 하나의 결과를 가진다\r\n<br>\r\n### 예시\r\n<br>\r\n```java\r\n\r\nint a = 10;\r\nint b = 20;\r\n\r\nif( a == b ){\r\nSystem.out.println(\"a와 b는 같다\");\r\n}else if( a != b ){\r\nSystem.out.println(\"a와 b는 다르다\");\r\n}\r\n\r\nif( a >= b ){\r\nSystem.out.println(\"a는 b보다 크거나 같다\");\r\n}else if( a < b ){\r\nSystem.out.println(\"a는 b보다 작다\");\r\n}\r\n\r\n```\r\n## 결과 \r\n- a와 b는 다르다\r\n- a는 b보다 작다\r\n\r\n## 부연\r\n- 관계 연산자라고도 부른다',10,0,1,3);
 
 /*Table structure for table `board` */
 
@@ -68,8 +70,8 @@ CREATE TABLE `board` (
 /*Data for the table `board` */
 
 insert  into `board`(`id`,`regDate`,`updateDate`,`name`,`code`) values 
-(1,'2020-12-17 13:12:03','2020-12-17 13:12:03','자유','free'),
-(2,'2020-12-17 13:12:03','2020-12-17 13:12:03','공지사항','notice'),
+(1,'2020-12-17 13:12:03','2020-12-17 13:12:03','FREE','free'),
+(2,'2020-12-17 13:12:03','2020-12-17 13:12:03','NOTICE','notice'),
 (3,'2020-12-17 13:12:03','2020-12-17 13:12:03','IT','it');
 
 /*Table structure for table `member` */
