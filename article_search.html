@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Java's Meow | search"/>
+<meta property="og:title" content="Java's Meow | article search"/>
 <meta property="og:description" content="자바 비기너 블로그"/>
 <meta property="og:image" content="oa_image.png"/>
 <meta charset="UTF-8">
@@ -86,7 +86,7 @@
 	<div class="title-bar con-min-width">
 		<div class="con">
 			<div class="title-bar__logo flex">
-				<div class=""></div>
+				<div class=""><i class="fas fa-search"></i> <span>SEARCH</span></div>
 				<i class="fas fa-paw"></i>
 			</div>
 		</div>
@@ -121,7 +121,7 @@
 			<ul v-for="article in filtered" class="flex">
 				 <li>{{article.id}}</li>
 	             <li>{{article.regDate}}</li>
-	             <li>{{article.extra__writer}}</li>
+	             <li>{{article.writer}}</li>
 	             <li>
 	               <a :href="'article_detail_' + article.id + '.html'" target="_blank">{{article.title}}</a>
             	 </li>

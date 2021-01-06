@@ -15,7 +15,7 @@ $.get(
 				body: row.body,
 				hit: row.hit,
 				likesCount: row.likesCount,
-				commentsCount: row.CommentsCount
+				commentsCount: row.commentsCount
 			};
 
 			articleList.push(article);
