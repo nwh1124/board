@@ -12,7 +12,10 @@ $.get(
 				regDate: row.regDate,
 				writer: row.extra__writer,
 				title: row.title,
-				body: row.body
+				body: row.body,
+				hit: row.hit,
+				likesCount: row.likesCount,
+				commentsCount: row.CommentsCount
 			};
 
 			articleList.push(article);
