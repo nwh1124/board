@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Java's Meow | search"/>
+<meta property="og:description" content="자바 비기너 블로그"/>
+<meta property="og:image" content="oa_image.png"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Addsense -->
+<script data-ad-client="ca-pub-5524119243157970" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1C79RKS6LG"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-1C79RKS6LG');
+</script>
+<!-- Analytics 끝 -->
+<!-- 파비콘 시작-->
+<link rel="shortcut icon" href="meow.ico" type="image/x-icon">
+<link rel="icon" href="meow.ico" type="image/x-icon">
+<!-- 파비콘 끝-->
+
+<title>Java's Meow</title>
+<!-- 폰트어썸 불러오기 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="app.css" />
+</head>
+<!-- 바디 -->
+<div class="body-content flex flex-column bg-black">
+
+	<!-- 탑 로고 -->
+	<div class="top-bar con-min-width">
+		<div class="logo con">
+			<img src=""/>
+			<i class="fas fa-cat"></i>
+		    <i class="fas fa-heart"></i>
+		    <i class="fab fa-java"></i> 
+			<span>Java's <span>M</span>eow
+			</span>
+		</div>
+	</div>
+		
+	<!-- 사이드 바 -->
+	<div class="side-bar flex flex-column border-2 bg-black">
+		<div class="side-bar__arrows flex">
+			<span><i class="fas fa-folder"></i></span>
+    	  <span><i class="fas fa-file-alt"></i></span> 
+		</div>
+		<div class="side-bar__menu flex">
+			<div class="side-bar__icon">
+				<i class="fas fa-cat"></i> <i class="fas fa-heart"></i> <i
+					class="fas fa-fish"></i>
+			</div>
+			<ul>
+				<li><a href="./index.html"> <i class="fas fa-home"></i> <span>HOME</span>
+				</a></li>
+				<li><a> <i class="fas fa-list"></i> <span>ARTICLE</span>
+				</a>
+					<ul>
+						<li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>FREE LIST</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>NOTICE LIST</span></a></li><li><a href="article_list_it_1.html" class="block"><i class="fab fa-java"></i> <span>IT LIST</span></a></li>
+					</ul></li>
+				<li><a href=""> <i class="fas fa-link"></i> <span>LINK</span>
+				</a>
+					<ul>
+						<li><a href="https://nwh1124.tistory.com/" target="_blank"> <i class="fab fa-blogger-b"></i> <span>BLOG</span>
+						</a></li>
+						<li><a href="https://github.com" target="_blank"> <i class="fab fa-github"></i> <span>GITHUB</span>
+						</a></li>
+					</ul></li>
+				<li><a href="./stat.html"> <i class="fas fa-chart-pie"></i> <span>STATISTICS</span>
+				</a></li>
+			</ul>
+		</div>
+		<div class="side-bar__tail">
+			<i class="fas fa-paw"></i>
+		</div>
+	</div>
+	<!-- 타이틀 바 -->
+	<div class="title-bar con-min-width">
+		<div class="con">
+			<div class="title-bar__logo flex">
+				<div class=""></div>
+				<i class="fas fa-paw"></i>
+			</div>
+		</div>
+	</div><!-- lodash 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<!-- jquery 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<div class="main con-min-width">
+	<div class="con">
+		<div class="article-search">
+          <form class="block">
+            <input :value="searchKeyword" @input="update" type="text" placeholder="검색어">
+          </form>
+        </div>
+		<div class="article-list content">
+			<ul class="flex">
+				<li>번호</li>
+				<li>작성일</li>
+				<li>작성자</li>
+				<li><a href="#">제목</a></li>
+				<li>조회수</li>
+				<li>댓글수</li>
+				<li>추천수</li>
+			</ul>
+			<ul v-for="article in filtered" class="flex">
+				 <li>{{article.id}}</li>
+	             <li>{{article.regDate}}</li>
+	             <li>{{article.writer}}</li>
+	             <li>
+	               <a :href="'article_' + article.id + '.html'" target="_blank">{{article.title}}</a>
+              </li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script src="article_search.js">
+</script><!-- 바텀 바 -->
+<div class="bottom-bar con-min-width">
+	<div class="con flex">
+		<div class="bottom-bar__site-info flex">
+			<div class="logo">
+				<i class="fas fa-cat"></i>
+			    <i class="fas fa-heart"></i>
+			    <i class="fab fa-java"></i> 
+		    	<span>Java's <span>M</span>eow
+				</span>
+			</div>
+			<div class="info">Copyright 2020.Java's Meow.All rights reserved.</div>
+		</div>
+	</div>
+</div>
+  
+<!-- 투탑 버튼 -->
+<div class="to-top-btn">
+  <i class="fas fa-cat"></i>
+  <i class="fas fa-angle-double-up"></i>
+</div>
+  
+<script src="app.js"></script>
+</body>
+</html>
