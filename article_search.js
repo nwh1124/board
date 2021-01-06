@@ -22,7 +22,7 @@ $.get(
 );
 
 new Vue({
-  el: "#article-list-wrap",
+  el: "#articleSearchList",
   data: {
     articleList:articleList,
     searchKeyword:''
