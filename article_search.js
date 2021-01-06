@@ -45,7 +45,7 @@ new Vue({
         if ( row.title.toLowerCase().indexOf(this.filterKey) > -1 ) {
           return true;
         }
-        else if ( row.writer.toLowerCase().indexOf(this.filterKey) > -1 ) {
+        else if ( row.extra__writer.toLowerCase().indexOf(this.filterKey) > -1 ) {
           return true;
         }
         else if ( row.body.toLowerCase().indexOf(this.filterKey) > -1 ) {
