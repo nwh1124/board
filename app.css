@@ -584,6 +584,11 @@ body {
   padding:10px;
 }
 /* 검색창 */
+/* 모바일 바디 */
+.mobile-body{
+  min-width:360px;
+}
+/* 모바일 바디 */
 /* 모바일 탑 바 */
 .mobile-body{
   height:100vh;
@@ -639,12 +644,18 @@ body {
   margin-bottom:15px;
 }
 .mobile-bottom-menu > ul > li{
-  margin:15px 0;
 }
 
 .mobile-bottom-menu > ul > li > a {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding:20px;
   font-size:1.2rem;
+}
+
+.mobile-bottom-menu > ul > li > a > i {
+  margin-bottom:5px;
 }
 
 .mobile-bottom-menu > ul > li:hover > a {
