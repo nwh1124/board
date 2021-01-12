@@ -153,66 +153,71 @@
 	<div class="con">
 		<div class="article-detail flex flex-column">
 			<div class="article-detail__title">
-				<span>자바#16 조건문</span>
+				<span>자바#17 논리 연산자</span>
 			</div>
 			<div class="article-detail__sub-info">
-				<span>it BOARD</span> <span>2021-01-08 12:13:21</span>
+				<span>it BOARD</span> <span>2021-01-12 11:41:58</span>
 				<span>관리자</span>
 			</div>
 			<div class="article-detail__body"># 자바
 <br>
-## 조건문
-- if( 조건 ) { 실행할 코드 }
-- 특정 조건 하에서만 코드가 실행되게 설계할 수 있다
-- else if, else를 뒤이어 붙일 수 있다
+## 논리 연산자
+- 값의 참, 거짓에 대한 연산자
+- 두 논리 값을 연산해 결과를 도출해낸다
+- &&는 값 모두가 참일 때만 참이 된다
+- ||는 값 중 하나라도 참일 때만 참이 된다
+- !는 값이 반대가 된다
 <br>
 ### 예시
 <br>
 ```java
 
-if ( true ) {
-	System.out.println("Ture");
+boolean A true;
+boolean B false;
+boolean C true;
+boolean D false;
+
+if ( A && B ) {
+	System.out.println("예문 1");
 }
 
-if ( false ) {
-	System.out.println("False");
+if ( A && C ) {
+	System.out.println("예문 2");
+}
+
+if ( B && C ) {
+	System.out.println("예문 3");
+}
+
+if ( A || B ) {
+	System.out.println("예문 4");
+}
+
+if ( A || C ) {
+	System.out.println("예문 5");
+}
+
+if ( B || D ) {
+	System.out.println("예문 6");
 }
 
 ```
 ## 결과 
-- Ture
+- 예문 2
+- 예문 4
+- 예문 5
 <br>
-
-### 예시 #2
-<br>
-```java
-
-int a = 5;
-int b = 10;
-
-if ( a > b ) {
-	System.out.println("a는 b보다 크다");
-}
-
-else {
-	System.out.println("a는 b보다 작다");
-}
-
-```
-## 결과 
-- a는 b보다 작다
 
 ## 부연
-- else if는 선행하는 if문의 조건이 만족되지 않을 때만 실행된다
-- else는 선행하는 if, else if의 조건이 전부 만족되지 않을 때 실행된다</div>
+- boolean 자료형 외에도 참 거짓을 구하는 연산에는 적용할 수 있다</div>
 			
 			<div class="article-detail__reply-box">
 			
 				<div id="disqus_thread"></div>
 					<script>
 						var disqus_config = function () {
-					        this.page.url = 'https://blog.nwh.kr/article_detail_18.html';
-					        this.page.identifier = 'article_detail_18.html';
+					        this.page.url = 'https://blog.nwh.kr/article_detail_19.html';
+					        this.page.identifier = 'article_detail_19.html';
 					    };
 					    (function() { // DON'T EDIT BELOW THIS LINE
 					    var d = document, s = d.createElement('script');
@@ -229,12 +234,12 @@ else {
 				</div>
 			
 			<div class="article-detail__menu">
-				<a title = "자바#17 논리 연산자"
-				 href="article_detail_19.html"
-				 class="">&lt; 이전 글</a> 
+				<a title = ""
+				 href="article_detail_0.html"
+				 class="none">&lt; 이전 글</a> 
 				<a href="article_list_it_1.html">목록</a>
-				<a title = "자바#15 비교 연산자" 
-				 href="article_detail_17.html"
+				<a title = "자바#16 조건문" 
+				 href="article_detail_18.html"
 				 class="">다음 글 &gt;</a>
 			</div>
 		</div>
