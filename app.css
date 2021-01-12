@@ -153,6 +153,8 @@ a {
 @media ( max-width:720px ) {
   .visible-md-up {
     display:none;
+  }  .con{
+    display:none !important;    
   }
 }
 
@@ -621,7 +623,7 @@ body {
   border-radius:15px; 
 }
 
-.content {  
+.content-background > .content {  
   height:100%;
   font-size:5rem;
 }
