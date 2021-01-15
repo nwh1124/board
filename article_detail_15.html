@@ -12,8 +12,8 @@
 <meta name="title" content="Java's Meow | ARTICLE DETAIL" />
 <meta name="keywords" content="[[site-keywords]] />
 <meta name="copyright" content="Java's Meow | ARTICLE DETAIL />
-<meta name="pubdate" content="2021-01-14 22:10:19 />
-<meta name="lastmod" content="2021-01-14 22:10:19 />
+<meta name="pubdate" content="2021-01-15 19:16:43 />
+<meta name="lastmod" content="2021-01-15 19:16:43 />
 <meta name="robots" content="all">
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Java's Meow | ARTICLE DETAIL" />
@@ -25,8 +25,8 @@
 <meta property="og:image:alt" content="blog.nwh.kr" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2021-01-14 22:10:19"/>
-<meta property="og:pubdate" content="2021-01-14 22:10:19" />
+<meta property="og:updated_time" content="2021-01-15 19:16:43"/>
+<meta property="og:pubdate" content="2021-01-15 19:16:43" />
 <meta property="og:url" content="https://blog.nwh.kr" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -99,7 +99,7 @@
 				<li><a> <i class="fas fa-list"></i> <span>ARTICLE</span>
 				</a>
 					<ul>
-						<li><a href="article_search.html" class="block"><i class="fas fa-search"></i> <span>SEARCH</span></a></li><li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>FREE LIST</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>NOTICE LIST</span></a></li><li><a href="article_list_it_1.html" class="block"><i class="fab fa-java"></i> <span>IT LIST</span></a></li>
+						<li><a href="article_search.html" class="block"><i class="fas fa-search"></i> <span>SEARCH</span></a></li><li><a href="article_list_it_1.html" class="block"><i class="fab fa-java"></i> <span>IT LIST</span></a></li><li><a href="article_list_note_1.html" class="block"><i class="fas fa-book-open"></i> <span>NOTE</span></a></li>
 					</ul></li>
 				<li><a href=""> <i class="fas fa-link"></i> <span>LINK</span>
 				</a>
@@ -150,46 +150,54 @@
 	<div class="con">
 		<div class="article-detail flex flex-column">
 			<div class="article-detail__title">
-				<span>자바#13 단항 연산자</span>
+				<span>자바#15 비교 연산자</span>
 			</div>
 			<div class="article-detail__sub-info">
-				<span>it BOARD</span> <span>2020-12-23 09:36:20</span>
+				<span>it BOARD</span> <span>2020-12-29 18:32:44</span>
 				<span>관리자</span>
 			</div>
 			<div class="article-detail__body"># 자바
 <br>
-## 단항 연산자
-- 단항 연산자는 항이 하나인 연산자이다
-- -3, +2 등 양수 및 음수 표현이 가능하다
-- a++, b-- 등 값을 1씩 더하거나 뺄 수 있다
+## 비교 연산자
+- 주어진 값들이 같은지, 다른지, 큰지, 작은지 등을 구분하는 연산자
+- 참true, 거짓false 중 하나의 결과를 가진다
 <br>
 ### 예시
 <br>
 ```java
+
 int a = 10;
+int b = 20;
 
-System.out.println(a++);
+if( a == b ){
+System.out.println("a와 b는 같다");
+}else if( a != b ){
+System.out.println("a와 b는 다르다");
+}
 
-System.out.println(++a);
+if( a >= b ){
+System.out.println("a는 b보다 크거나 같다");
+}else if( a < b ){
+System.out.println("a는 b보다 작다");
+}
 
-System.out.println(--a);
-
-System.out.println(a--);
-
-System.out.println(a);
 ```
 ## 결과 
-10
-12
-11
-11
-10
+- a와 b는 다르다
+- a는 b보다 작다
 
 ## 부연
-- ++, --와 같은 단항 연산자는 항의 앞 뒤 모두 자리할 수 있다
-- 항의 앞에 자리할 경우 연산 후 println이 실행된다
-- 항의 뒤에 자리할 경우 println 실행 후 연산이 일어난다</div>
+- 관계 연산자라고도 부른다
+			</div>
 			
+			<div class="article-detail-tag">
+				  <h3>태그</h3>
+				        <hr>
+				  <div class="tag-box">
+				  <a href="article_tag.html?tag=JAVA">#JAVA </a>
+				  </div>
+				</div>  
+						
 			<div class="article-detail__reply-box">
 			
 				<div id="disqus_thread"></div>
@@ -213,11 +221,11 @@ System.out.println(a);
 				</div>
 			
 			<div class="article-detail__menu">
-				<a title = "자바#14 Boolean"
+				<a title = "자바#16 조건문"
 				 href="article_detail_16.html"
 				 class="">&lt; 이전 글</a> 
 				<a href="article_list_it_1.html">목록</a>
-				<a title = "자바#12 연산자" 
+				<a title = "자바#14 Boolean" 
 				 href="article_detail_14.html"
 				 class="">다음 글 &gt;</a>
 			</div>

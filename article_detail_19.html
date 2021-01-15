@@ -12,8 +12,8 @@
 <meta name="title" content="Java's Meow | ARTICLE DETAIL" />
 <meta name="keywords" content="[[site-keywords]] />
 <meta name="copyright" content="Java's Meow | ARTICLE DETAIL />
-<meta name="pubdate" content="2021-01-14 22:10:19 />
-<meta name="lastmod" content="2021-01-14 22:10:19 />
+<meta name="pubdate" content="2021-01-15 19:16:43 />
+<meta name="lastmod" content="2021-01-15 19:16:43 />
 <meta name="robots" content="all">
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="Java's Meow | ARTICLE DETAIL" />
@@ -25,8 +25,8 @@
 <meta property="og:image:alt" content="blog.nwh.kr" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2021-01-14 22:10:19"/>
-<meta property="og:pubdate" content="2021-01-14 22:10:19" />
+<meta property="og:updated_time" content="2021-01-15 19:16:43"/>
+<meta property="og:pubdate" content="2021-01-15 19:16:43" />
 <meta property="og:url" content="https://blog.nwh.kr" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -99,7 +99,7 @@
 				<li><a> <i class="fas fa-list"></i> <span>ARTICLE</span>
 				</a>
 					<ul>
-						<li><a href="article_search.html" class="block"><i class="fas fa-search"></i> <span>SEARCH</span></a></li><li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>FREE LIST</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>NOTICE LIST</span></a></li><li><a href="article_list_it_1.html" class="block"><i class="fab fa-java"></i> <span>IT LIST</span></a></li>
+						<li><a href="article_search.html" class="block"><i class="fas fa-search"></i> <span>SEARCH</span></a></li><li><a href="article_list_it_1.html" class="block"><i class="fab fa-java"></i> <span>IT LIST</span></a></li><li><a href="article_list_note_1.html" class="block"><i class="fas fa-book-open"></i> <span>NOTE</span></a></li>
 					</ul></li>
 				<li><a href=""> <i class="fas fa-link"></i> <span>LINK</span>
 				</a>
@@ -150,64 +150,38 @@
 	<div class="con">
 		<div class="article-detail flex flex-column">
 			<div class="article-detail__title">
-				<span>자바#17 논리 연산자</span>
+				<span>오답노트 #1</span>
 			</div>
 			<div class="article-detail__sub-info">
-				<span>it BOARD</span> <span>2021-01-12 11:41:58</span>
+				<span>note BOARD</span> <span>2021-01-15 18:54:59</span>
 				<span>관리자</span>
 			</div>
-			<div class="article-detail__body"># 자바
-<br>
-## 논리 연산자
-- 값의 참, 거짓에 대한 연산자
-- 두 논리 값을 연산해 결과를 도출해낸다
-- &&는 값 모두가 참일 때만 참이 된다
-- ||는 값 중 하나라도 참일 때만 참이 된다
-- !는 값이 반대가 된다
-<br>
-### 예시
-<br>
-```java
+			<div class="article-detail__body"># 문제
 
-boolean A true;
-boolean B false;
-boolean C true;
-boolean D false;
+## Error : The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
 
-if ( A && B ) {
-	System.out.println("예문 1");
-}
+- 다이나믹 웹이 아닌 일반 자바 프로젝트에서 JSP을 사용하려 했을 때 발생했다
 
-if ( A && C ) {
-	System.out.println("예문 2");
-}
+- 해결 방법
+  - 자바 프로젝트 우클릭 - 빌드 패스 - 컨픽 빌드 패스 - 라이브러리 탭 - 모듈패스 클릭
 
-if ( B && C ) {
-	System.out.println("예문 3");
-}
+  - -> 라이브러리 추가addLibrary 클릭 -> 서버 런타임 Server runtime -> 버전에 맞는 톰캣 추가.
 
-if ( A || B ) {
-	System.out.println("예문 4");
-}
+- finish 버튼을 누르면 끝!
 
-if ( A || C ) {
-	System.out.println("예문 5");
-}
-
-if ( B || D ) {
-	System.out.println("예문 6");
-}
-
-```
-## 결과 
-- 예문 2
-- 예문 4
-- 예문 5
 <br>
 
-## 부연
-- boolean 자료형 외에도 참 거짓을 구하는 연산에는 적용할 수 있다</div>
+- 결국 파다 보면 답이 나온다...
+			</div>
 			
+			<div class="article-detail-tag">
+				  <h3>태그</h3>
+				        <hr>
+				  <div class="tag-box">
+				  <a href="article_tag.html?tag=JAVA">#JAVA </a>
+				  </div>
+				</div>  
+						
 			<div class="article-detail__reply-box">
 			
 				<div id="disqus_thread"></div>
@@ -231,13 +205,13 @@ if ( B || D ) {
 				</div>
 			
 			<div class="article-detail__menu">
-				<a title = "자바#18 반복문"
-				 href="article_detail_20.html"
-				 class="">&lt; 이전 글</a> 
-				<a href="article_list_it_1.html">목록</a>
-				<a title = "자바#16 조건문" 
-				 href="article_detail_18.html"
-				 class="">다음 글 &gt;</a>
+				<a title = ""
+				 href="article_detail_0.html"
+				 class="none">&lt; 이전 글</a> 
+				<a href="article_list_note_1.html">목록</a>
+				<a title = "" 
+				 href="article_detail_0.html"
+				 class="none">다음 글 &gt;</a>
 			</div>
 		</div>
 	</div>
