@@ -150,70 +150,65 @@
 	<div class="con">
 		<div class="article-detail flex flex-column">
 			<div class="article-detail__title">
-				<span>자바#17 논리 연산자</span>
+				<span>오답노트 #2</span>
 			</div>
 			<div class="article-detail__sub-info">
-				<span>it BOARD</span> <span>2021-01-12 11:41:58</span>
+				<span>note BOARD</span> <span>2021-01-18 19:22:45</span>
 				<span>관리자</span>
 			</div>
-			<div class="article-detail__body"># 자바
+			<div class="article-detail__body"># 문제
+
+## JavaScript
+
+### form의 onsubmit="" 속성을 설정했을 때 false가 나와도 submit이 실행되는 버그
 <br>
-## 논리 연산자
-- 값의 참, 거짓에 대한 연산자
-- 두 논리 값을 연산해 결과를 도출해낸다
-- &&는 값 모두가 참일 때만 참이 된다
-- ||는 값 중 하나라도 참일 때만 참이 된다
-- !는 값이 반대가 된다
-<br>
-### 예시
-<br>
-```java
+#### 문제가 발생했던 코드
 
-boolean A true;
-boolean B false;
-boolean C true;
-boolean D false;
-
-if ( A && B ) {
-	System.out.println("예문 1");
+```javascript
+<script>
+function check(){
+	if( form.loginId.value == "" ){
+		alert("아이디를 입력해주세요.");
+		form.loginId.focus();
+		return false;
+	}else if( form.loginPw.value == "" ){
+		alert("비밀번호를 입력해주세요.");
+		form.loginPw.focus();
+		return false;
+	}else {
+		return true;
+	}
 }
+</script>
 
-if ( A && C ) {
-	System.out.println("예문 2");
-}
-
-if ( B && C ) {
-	System.out.println("예문 3");
-}
-
-if ( A || B ) {
-	System.out.println("예문 4");
-}
-
-if ( A || C ) {
-	System.out.println("예문 5");
-}
-
-if ( B || D ) {
-	System.out.println("예문 6");
-}
-
+<form action="doLogin" onsubmit="return check()">
+  <div>ID</div>
+  <br>  
+  <input type="text" placeholder="아이디를 입력해주세요." name="loginId">
+  <hr>
+  <div>Password</div>
+  <br>
+  <input type="text" placeholder="비밀 번호를 입력해주세요." name="loginPw">
+  <hr>
+  <input type="submit" value="로그인">
+  <input type="button" value="뒤로가기" onclick="history.back();">
+</form>
 ```
-## 결과 
-- 예문 2
-- 예문 4
-- 예문 5
-<br>
 
-## 부연
-- boolean 자료형 외에도 참 거짓을 구하는 연산에는 적용할 수 있다
+#### 원인과 해결법
+
+- form 속성에 name이 없어서 function check() 내부의 form.loginId.value가 form을 인식하지 못했다
+
+- <form></form> 값이 있었기 때문에 무심코 form.loginId.value의 form과 동일하다고 착가해서 생긴 버그였다
+
+- 추가로 원래는 form 앞에 document.이 있지만 생략된 것이다
 			</div>
 			
 			<div class="article-detail-tag">
 				  <h3>태그</h3>
 				        <hr>
 				  <div class="tag-box">
-				  <a href="article_tag.html?tag=JAVA">#JAVA </a>
+				  
 				  </div>
 				</div>  
 						
@@ -222,8 +217,8 @@ if ( B || D ) {
 				<div id="disqus_thread"></div>
 					<script>
 						var disqus_config = function () {
-					        this.page.url = 'https://blog.nwh.kr/article_detail_17.html';
-					        this.page.identifier = 'article_detail_17.html';
+					        this.page.url = 'https://blog.nwh.kr/article_detail_20.html';
+					        this.page.identifier = 'article_detail_20.html';
 					    };
 					    (function() { // DON'T EDIT BELOW THIS LINE
 					    var d = document, s = d.createElement('script');
@@ -240,12 +235,12 @@ if ( B || D ) {
 				</div>
 			
 			<div class="article-detail__menu">
-				<a title = "자바#18 반복문"
-				 href="article_detail_18.html"
-				 class="">&lt; 이전 글</a> 
-				<a href="article_list_it_1.html">목록</a>
-				<a title = "자바#16 조건문" 
-				 href="article_detail_16.html"
+				<a title = ""
+				 href="article_detail_0.html"
+				 class="none">&lt; 이전 글</a> 
+				<a href="article_list_note_1.html">목록</a>
+				<a title = "오답노트 #1" 
+				 href="article_detail_19.html"
 				 class="">다음 글 &gt;</a>
 			</div>
 		</div>
