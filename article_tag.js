@@ -1,12 +1,14 @@
 const articleList = [];
 const tags = [];
 
+let params = location.search.substr(location.search.indexOf("?") + 1);
+let searchTag = params.substr(4);
+
 $.get(
 	'article_list.json',
 	{},
 	function(data) {
 		data.forEach((row, index) => {
-			console.log(row);
 
 			const article = {
 				id: row.id,
@@ -30,15 +32,16 @@ $.get(
 	{},
 	function(data) {
 		data.forEach((row, index) => {
-			console.log(row);
-
-			const tag = {
-				type: row.relTypeCode,
-				id: row.relId,
-				body: row.body
-			};
-
+  
+      if(row.body == 'searchTag'){       
+        const tag = {
+          type: row.relTypeCode,
+          id: row.relId,
+          body: row.body
+        } 
 			tags.push(tag);
+      }
+
 		});
 	},
 	'json'
@@ -63,7 +66,7 @@ new Vue({
     filtered: function() {
       
       return this.articleList.filter((row) => {
-        if ( row.title.toLowerCase().indexOf(this.filterKey) > -1 ) {
+        if ( row.id.toLowerCase().indexOf(this.filterKey.id) > -1 ) {
           return true;
         }
       });
