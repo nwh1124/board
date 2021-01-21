@@ -33,7 +33,7 @@ $.get(
 	function(data) {
 		data.forEach((row, index) => {
   
-      if(row.body == 'searchTag'){       
+      if(row.body == this.searchTag){       
         const tag = {
           type: row.relTypeCode,
           id: row.relId,
