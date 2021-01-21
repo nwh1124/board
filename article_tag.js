@@ -61,12 +61,12 @@ new Vue({
   },
   computed: {
     filterKey:function() {
-      return this.tag.id.toLowerCase();
+      return this.tags.id;
     },
     filtered: function() {
       
       return this.articleList.filter((row) => {
-        if ( row.id.toLowerCase().indexOf(this.filterKey) > -1 ) {
+        if ( row.id.indexOf(this.filterKey) > -1 ) {
           return true;
         }
       });
