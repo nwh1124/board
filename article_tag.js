@@ -33,7 +33,7 @@ $.get(
 			console.log(row);
 
 			const tag = {
-				Type: row.relTypeCode,
+				type: row.relTypeCode,
 				id: row.relId,
 				body: row.body
 			};
@@ -61,9 +61,6 @@ new Vue({
       return this.tag.toLowerCase();
     },
     filtered: function() {
-      if ( this.tag.length == 0 ) {
-        return this.articleList;
-      }
       
       return this.articleList.filter((row) => {
         if ( row.title.toLowerCase().indexOf(this.filterKey) > -1 ) {
