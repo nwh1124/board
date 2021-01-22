@@ -8,31 +8,27 @@ $.get(
 	{},
 	function(data) {
 		data.forEach((row, index) => {
-  		
-      if(row.body == this.searchTags){       
-	        const articleWithTags = {
-			id: row.id,
-			regDate: row.regDate,
-			writer: row.extra__writer,
-			title: row.title,
-			body: row.body,
-			hit: row.hit,
-			likesCount: row.likesCount,
-			commentsCount: row.commentsCount,
-	        tags: row.tags
-        } 
-			articleList.push(articleWithTags);
-      }
-
+		        const articleWithTags = {
+              id: row.id,
+              regDate: row.regDate,
+              title: row.title,
+              body: row.body,
+              hit: row.hitsCount,
+              likesCount: row.likesCount,
+              commentsCount: row.commentsCount,
+              tags: row.extra__tags
+		      }; 
+		    articleList.push(articleWithTags);				
 		});
 	},
 	'json'
 );
 
 new Vue({
-  el: "#articleTagList",
+  el: "#articleSearchList",
   data: {
-    articleList:articleList
+    articleList:articleList,
+    searchTag:searchTag
   },
   computed: {
     filterKey:function() {
