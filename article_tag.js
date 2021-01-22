@@ -1,31 +1,7 @@
 const articleList = [];
-const tags = [];
 
 let params = location.search.substr(location.search.indexOf("?") + 1);
 let searchTag = params.substr(4);
-
-$.get(
-	'article_list.json',
-	{},
-	function(data) {
-		data.forEach((row, index) => {
-
-			const article = {
-				id: row.id,
-				regDate: row.regDate,
-				writer: row.extra__writer,
-				title: row.title,
-				body: row.body,
-				hit: row.hit,
-				likesCount: row.likesCount,
-				commentsCount: row.commentsCount
-			};
-
-			articleList.push(article);
-		});
-	},
-	'json'
-);
 
 $.get(
 	'article_tag.json',
@@ -33,13 +9,19 @@ $.get(
 	function(data) {
 		data.forEach((row, index) => {
   
-      if(row.body == searchTag){       
-        const tag = {
-          type: row.relTypeCode,
-          id: row.relId,
-          body: row.body
+      if(row.body == searchTags){       
+	        const articleWithTag = {
+			id: row.id,
+			regDate: row.regDate,
+			writer: row.extra__writer,
+			title: row.title,
+			body: row.body,
+			hit: row.hit,
+			likesCount: row.likesCount,
+			commentsCount: row.commentsCount,
+	        tags: row.tags
         } 
-			tags.push(tag);
+			articleList.push(articleWithTags);
       }
 
 		});
@@ -50,23 +32,16 @@ $.get(
 new Vue({
   el: "#articleTagList",
   data: {
-    articleList:articleList,
-    tags:tags,
-    tag:''
-  },
-  methods: {
-    update: _.debounce(function(e){
-      this.tag = e.target.value;
-    }, 500)
+    articleList:articleList
   },
   computed: {
     filterKey:function() {
-      return this.tags.id;
+      return this.searchTag;
     },
     filtered: function() {
       
       return this.articleList.filter((row) => {
-        if ( row.id.indexOf(this.filterKey) > -1 ) {
+        if ( row.tags.indexOf(this.filterKey) > -1 ) {
           return true;
         }
       });
