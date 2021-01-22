@@ -8,8 +8,8 @@ $.get(
 	{},
 	function(data) {
 		data.forEach((row, index) => {
-  
-      if(row.body == searchTags){       
+  		
+      if(row.body == this.searchTags){       
 	        const articleWithTag = {
 			id: row.id,
 			regDate: row.regDate,
