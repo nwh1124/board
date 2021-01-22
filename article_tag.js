@@ -10,7 +10,7 @@ $.get(
 		data.forEach((row, index) => {
   		
       if(row.body == this.searchTags){       
-	        const articleWithTag = {
+	        const articleWithTags = {
 			id: row.id,
 			regDate: row.regDate,
 			writer: row.extra__writer,
