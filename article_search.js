@@ -25,7 +25,7 @@ $.get(
 );
 
 new Vue({
-  el: "#articleTagList",
+  el: "#articleSearchList",
   data: {
     articleList:articleList,
     searchKeyword:''
